@@ -6,5 +6,5 @@ A web sockets test with Dancer
 Start the server.
 `plackup -s Twiggy bin/app.pl`
 
-Send a message to clients.
-`curl http://localhost:5000/send_msg?msg=salutations`
+See values at http://0.0.0.0:5000
+Update values at http://0.0.0.0:5000/admin
