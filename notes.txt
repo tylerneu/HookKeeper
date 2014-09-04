@@ -1,0 +1,14 @@
+Terms:
+
+Pull, Event
+
+Class
+
+Tractor
+
+Hook, Attempt
+
+Resources:
+
+This page lists results for a pull. It is a good use case for noting multiple hooks per tractor in a class.
+http://www.lionssuperpull.com/results.php

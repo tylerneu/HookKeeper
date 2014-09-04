@@ -3,7 +3,7 @@
 # all the settings in this file will be loaded at Dancer's startup.
 
 # Your application's name
-appname: "WebSockets"
+appname: "HookKeeper"
 
 # The default layout to use for your application (located in
 # views/layouts/main.tt)
@@ -27,7 +27,7 @@ template: "template_toolkit"
 plugins:
   Database:
     driver: 'mysql'
-    database: 'WebSockets'
+    database: 'HookKeeper'
     host: 'localhost'
     port: 3306
     username: 'root'

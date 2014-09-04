@@ -1,20 +1,31 @@
-DROP DATABASE IF EXISTS `WebSockets`;
-CREATE DATABASE `WebSockets`;
+DROP DATABASE IF EXISTS `HookKeeper`;
+CREATE DATABASE `HookKeeper`;
 
-use `WebSockets`;
+use `HookKeeper`;
 
-CREATE TABLE `pulls` (
+CREATE TABLE `pull` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `make` varchar(256) NOT NULL DEFAULT '',
-  `model` varchar(256) NOT NULL DEFAULT '',
-  `distance` int(11),
-  `notified` tinyint(1) DEFAULT NULL,
+  `name` varchar(255) NOT NULL,
+  `date` date NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-INSERT INTO `pulls` (make, model) VALUES
-  ('John Deere', '4430'), 
-  ('Oliver', '2255'), 
-  ('International', '1066'), 
-  ('Ford', '9600'), 
-  ('Allis Chalmers', '7030');
+CREATE TABLE `class` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `tractor` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `make` varchar(255) NOT NULL,
+  `model` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `hook` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `distance` smallint(4),
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
