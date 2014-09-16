@@ -3,7 +3,7 @@ $(function() {
   $('a.delete').each( function(index) {
     $(this).click( function() {
     	$.ajax({
-        url:      "/pull/" + $(this).attr('data-pull_id'),
+        url:      "/" + $(this).attr('data-resource') + "/" + $(this).attr('data-id'),
         type:     "DELETE",
         dataType: 'json',
         success: function( stuff ) {

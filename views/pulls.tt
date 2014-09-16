@@ -1,14 +1,14 @@
-<form action="pull" method="post" accept-charset="utf-8">  
+<ul>
+  <% FOREACH pull IN pulls %>
+  <li>
+    <a href="/pull/<% pull.id %>"><% pull.name %>, <% pull.date %></a>
+    <a class="delete" href="#" data-resource="pull" data-id="<% pull.id %>">delete</a>
+  </li>
+  <% END %>
+</ul>
+
+<form action="/pull" method="post" accept-charset="utf-8">  
   <p><label for="name">Name</label><input type="text" name="name" value="" id="name"></p>
   <p><label for="date">Date</label><input type="text" name="date" value="" id="date"></p>
   <p><input type="submit" value="Add Pull"></p>
 </form>
-
-<ul>
-<% FOREACH pull IN pulls %>
-<li>
-  <a href="/pull/<% pull.id %>"><% pull.name %>, <% pull.date %></a>
-  <a class="delete" href="#" data-pull_id="<% pull.id %>">delete</a>
-</li>
-<% END %>
-</ul>

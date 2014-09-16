@@ -1,1 +1,16 @@
 <h1><% pull.name %>, <% pull.date %></h1>
+
+<ul>
+  <% FOREACH class IN classes %>
+  <li>
+    <a href="/class/<% class.id %>"><% class.name %></a>
+    <a class="delete" href="#" data-resource="class" data-id="<% class.id %>">delete</a>
+  </li>
+  <% END %>
+</ul>
+
+<form action="/class" method="post" accept-charset="utf-8">  
+  <input type="hidden" name="pull_id" value="<% pull.id %>" />
+  <p><label for="name">Name</label><input type="text" name="name" value="" id="name"></p>
+  <p><input type="submit" value="Add Class"></p>
+</form>

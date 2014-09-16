@@ -1,0 +1,19 @@
+<h1><% class.name %></h1>
+<h2><% pull.name %>, <% pull.date %></h2>
+
+<ul>
+  <% FOREACH tractor IN tractors %>
+  <li>
+    <span><% tractor.name %> <% tractor.make %> <% tractor.model %></span>
+    <a class="delete" href="#" data-resource="tractor" data-id="<% tractor.id %>">delete</a>
+  </li>
+  <% END %>
+</ul>
+
+<form action="/tractor" method="post" accept-charset="utf-8">
+  <input type="hidden" name="class_id" value="<% class.id %>" />
+  <p><label for="name">Name</label><input type="text" name="name" value=""></p>
+  <p><label for="make">Make</label><input type="text" name="make" value=""></p>
+  <p><label for="model">Model</label><input type="text" name="model" value=""></p>
+  <p><input type="submit" value="Add Tractor"></p>
+</form>
