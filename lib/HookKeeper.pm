@@ -31,7 +31,7 @@ resource 'pull(s)' =>
     
   },
   delete => sub {
-    database->quick_delete('pull', { id => captures()->{'id'}});
+    database->quick_delete('pull', { id => captures()->{'pull_id'}});
   };
   
 resource 'class' => 
