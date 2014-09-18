@@ -1,4 +1,4 @@
-<h1><% pull.name %>, <% pull.date %></h1>
+<h2><% pull.name %>, <% pull.date %></h2>
 
 <ul>
   <% FOREACH class IN classes %>

@@ -1,5 +1,5 @@
-<h1><% class.name %></h1>
-<h2><% pull.name %>, <% pull.date %></h2>
+<h2><% class.name %></h2>
+<h3><% pull.name %>, <% pull.date %></h3>
 
 <ul>
   <% FOREACH tractor IN tractors %>

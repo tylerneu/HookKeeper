@@ -8,6 +8,7 @@
     <script src="/javascripts/global.js" type="text/javascript" charset="utf-8"></script>
   </head>
   <body>
+    <h1 id=""><a href="/">HookKeeper</a></h1>
     <% content %>
   </body>
 </html>
