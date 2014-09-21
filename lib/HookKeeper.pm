@@ -3,11 +3,11 @@ package HookKeeper;
 use Dancer ':syntax';
 use Dancer::Plugin::Database;
 use Dancer::Plugin::CRUD;
+use Dancer::Plugin::Auth::Extensible;
+
 use Data::Dumper;
 
-# prepare_serializer_for_format;
-
-get '/' => sub {
+get '/' => require_login sub {
   redirect '/pulls';
 };
 

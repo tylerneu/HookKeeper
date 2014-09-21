@@ -38,6 +38,10 @@ plugins:
         AutoCommit: 1
     on_connect_do: "SET SQL_MODE='TRADITIONAL'"
     log_queries: 1
+  Auth::Extensible:
+    realms:
+        users:
+            provider: 'Database'
 
 # For session support enable the following line and see Dancer::Session
-# session: "YAML"
+session: simple
