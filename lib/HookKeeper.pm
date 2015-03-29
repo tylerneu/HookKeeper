@@ -12,7 +12,7 @@ get '/' => require_login sub {
 };
 
 resource 'pull(s)' =>
-  index  => sub {
+  index  => require_login sub {
     my @pulls = database->quick_select('pull', {}, { order_by => { asc => 'date' } });
     template 'pulls', { pulls => \@pulls };
   },
