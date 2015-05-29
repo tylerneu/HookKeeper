@@ -1,4 +1,4 @@
 #!/usr/bin/env perl
 use Dancer;
-use HookKeeper;
+use HookKeeper2;
 dance;
